@@ -1,5 +1,5 @@
 variable "project_name" {
-  default = "azharprojects"
+  default = "azharproject"
 }
 
 variable "environment" {
