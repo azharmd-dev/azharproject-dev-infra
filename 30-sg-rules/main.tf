@@ -1,9 +1,10 @@
-resource "aws_security_group_rule" "example" {
+#Backend accepting traffic from bastion
+resource "aws_security_group_rule" "backend_alb_bastion" {
   type              = "ingress"
-  from_port         = 0
-  to_port           = 65535
+  security_group_id = local.backend_alb_sg_id
+  source_security_group_id = local.bastion_sg_id
+  from_port         = 80
   protocol          = "tcp"
-  cidr_blocks       = [aws_vpc.example.cidr_block]
-  ipv6_cidr_blocks  = [aws_vpc.example.ipv6_cidr_block]
-  security_group_id = "sg-123456"
+  to_port           = 80
 }
+
