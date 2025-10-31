@@ -3,6 +3,7 @@ resource "aws_instance" "bastion" {
       vpc_security_group_ids = [local.bastion_sg_id]
       instance_type = local.instance_type
       subnet_id = local.public_subnet_id
+      associate_public_ip_address = true
       tags = merge(
         local.common_tags,
         {

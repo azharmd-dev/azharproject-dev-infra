@@ -8,3 +8,11 @@ resource "aws_security_group_rule" "backend_alb_bastion" {
   to_port           = 80
 }
 
+resource "aws_security_group_rule" "bastion_local" {
+  type              = "ingress"
+  security_group_id = local.bastion_sg_id
+  cidr_blocks = ["0.0.0.0/0"]
+  from_port         = 22
+  protocol          = "tcp"
+  to_port           = 22
+}
