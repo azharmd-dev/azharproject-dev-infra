@@ -14,17 +14,17 @@ mkdir -p $Repo_Dir
 mkdir -p /var/log/azharprojects/
 touch ansible.log
 
-cd $REPO_DIR
+cd $Repo_Dir
 
 # check if ansible repo is already cloned or not
 
-if [ -d $ANSIBLE_DIR ]; then
+if [ -d $Ansible_Dir ]; then
 
-    cd $ANSIBLE_DIR
+    cd $Ansible_Dir
     git pull
 else
     git clone $REPO_URL
-    cd $ANSIBLE_DIR
+    cd $Ansible_Dir
 fi
 
 ansible-playbook -e component=$component -e env=$env main.yaml
