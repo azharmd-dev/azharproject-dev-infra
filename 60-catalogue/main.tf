@@ -13,6 +13,7 @@ resource "aws_instance" "catalogue" {
     }
 
 
+#configuration using anisble roles
 resource "terraform_data" "catalogue" {
   triggers_replace = [
     aws_instance.catalogue.id,
