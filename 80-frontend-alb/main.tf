@@ -34,7 +34,7 @@ resource "aws_lb_listener" "frontend_alb" {
 #route53 record using alias
 resource "aws_route53_record" "frontend_alb" {
   zone_id = var.zone_id
-  name    = "roboshop-${var.environment}.${var.domain_name}"
+  name    = "azharproject-${var.environment}.${var.domain_name}"
   type    = "A"
   allow_overwrite = true
 
