@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket = "azhar-terraform-dev"
-    key    = "roboshop-dev-infra-10-sg"
+    key    = "azharprojects-dev-infra-sg"
     region = "us-east-1"
     use_lockfile = true
     encrypt = true
