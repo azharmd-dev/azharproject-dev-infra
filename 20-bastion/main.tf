@@ -5,7 +5,7 @@ resource "aws_instance" "bastion" {
     subnet_id = local.public_subnet_id
     associate_public_ip_address = true
     iam_instance_profile = aws_iam_instance_profile.bastion.name
-    # need more for terraform
+    # need more size for terraform
     root_block_device {
         volume_size = 50
         volume_type = "gp3" # or "gp2", depending on your preference
@@ -17,8 +17,7 @@ resource "aws_instance" "bastion" {
           Name  = "${var.project_name}-${var.environment}-bastion"
         }
       )
-      
-    }
+}    
 
 resource "aws_iam_instance_profile" "bastion" {
   name = "bastion"
