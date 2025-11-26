@@ -13,7 +13,7 @@ The environment is organized into 3 logical tiers this ensures:
 
 ## Architecture Diagram
 
-![AWS Three Tier Architecture – Terraform VPC, Public, Private, Database Subnets](./assets/three-tier-architecture.png)
+![AWS Three Tier Architecture – Terraform VPC, Public, Private, Database Subnets](./assets/three-tier-architecture.drawio)
 
 ### Public Subnet
 * Accessible from the internet.
