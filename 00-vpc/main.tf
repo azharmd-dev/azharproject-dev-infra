@@ -1,7 +1,7 @@
 module "vpc" {
   source = "git::https://github.com/azharmd-dev/tf-aws-vpc.git?ref=main"
 #   vpc_cidr = "10.0.0.0/16"
-#   project_name = "azharproject"
+#   project_name = "robomart"
 #   environment = "dev"
 
   vpc_cidr = var.vpc_cidr
